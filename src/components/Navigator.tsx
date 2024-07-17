@@ -23,8 +23,8 @@ export default function Navigator({routes, spacer}: {routes: Route[], spacer?: s
 
   const routeList = routes.map((route) => (
       <div key={route.path}>
-        { spacer && route.path != routes[0].path && <span> {spacer} </span> }
-        <Link className="px-3 hover:text-blue-400" href={generateUrl(route)}> {route.name} </Link>
+        { spacer && route.path != routes[0].path && <span className="px-2">{spacer}</span> }
+        <Link className="mx-auto hover: hover:text-blue-600" href={generateUrl(route)}>{route.name}</Link>
       </div>
     )
   )
