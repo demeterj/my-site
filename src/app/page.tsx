@@ -1,4 +1,3 @@
-import profilePic from './proPic.jpg'
 import Image from 'next/image'
 import ContentBox from '@/components/contentBox';
 
@@ -18,7 +17,7 @@ export default function Home() {
         </div>
         <ContentBox>
           <Image
-            src={profilePic}
+            src="/ProfilePicture.JPG"
             alt="Picture of Jon"
             width={400}
             height={400}

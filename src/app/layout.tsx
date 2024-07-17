@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`flex flex-col justify-between p-4 ${inter.className}`}>
+      <body className={`flex flex-col justify-between ${inter.className}`}>
         <Header />
         {children}
         <Footer />
