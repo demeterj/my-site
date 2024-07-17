@@ -1,2 +1,1 @@
-# my-site
-My 
+This is Jonathan Demeter's personal website, designed, built, procured, elevated by yours truly.
