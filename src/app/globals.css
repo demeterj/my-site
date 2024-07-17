@@ -3,19 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-bg-color: 243, 243, 243;
+  --secondary-bg-color: 137, 215, 249;
+  --primary-text-color: 0, 0, 0;
+  --secondary-text-color: 255, 255, 255;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: rgb(var(--primary-bg-color));
+  min-height: 100vh;
+  color: rgb(var(--primary-text-color))
 }
 
 @layer utilities {
