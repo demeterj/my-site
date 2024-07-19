@@ -1,8 +1,7 @@
-import LinkedInLogo from './linkedInLogo.png'
-import linkedInThumbnail from './linkedInThumbnail.png'
 import Image from 'next/image'
 
 export default function Footer() {
+  const year = new Date().getFullYear()
   return (
     <div className="flex justify-around py-8 bg-blue-100 border-t-2 border-solid border-black">
       <div className="flex flex-col">
@@ -21,7 +20,7 @@ export default function Footer() {
         </a>
       </div>
       <div className="flex flex-col text-sm justify-center">
-        @ 2024 By Jonathan Demeter
+        © {year} By Jonathan Demeter
       </div>
     </div>
   )

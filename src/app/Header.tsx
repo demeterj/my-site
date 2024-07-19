@@ -27,7 +27,7 @@ export default function Header() {
     }
   ];
   return (
-    <div className="flex w-full p-2 bg-blue-100 items-center justify-between border-b-2 border-solid border-black">
+    <div className="flex w-full py-2 px-4 bg-blue-100 items-center justify-between border-b-2 border-solid border-black">
       <Logo />
       <Navigator routes={initialRoutes} spacer="|" />
     </div>
