@@ -16,7 +16,9 @@ export default function ResumeCard({resumeItem}: {resumeItem: ResumeItem}) {
       <div className="col-span-3">
       <p className="font-semibold text-[18px]">{resumeItem.title}</p>
         <p className="text-[16px]">{resumeItem.subtitle}</p>
-        <ul className="pl-4 text-[16px]">
+        <p className="text-[16px]">{resumeItem.subsubtitle}</p>
+        <p className="text-[14px]">{resumeItem.description}</p>
+        <ul className="pl-4 text-[14px]">
           {resumeItem.accomplishments.map((accomplishment, index) => (
             <li className="list-disc pl-2" key={index}>{accomplishment}</li>
           ))}

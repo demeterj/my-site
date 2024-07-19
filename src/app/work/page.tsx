@@ -4,7 +4,7 @@ import { experiences, educations, skills } from './resumeInfo'
 
 export default function Resume() {
   return (
-    <div className="px-[200px] py-[100px]">
+    <div className="xl:px-[300px] px-[10%] py-[100px]">
       <ResumeHeader />
       <div className="flex flex-col w-full divide-y-2 border-y-2">
           <ResumeSection title="Experience" resumeItems={experiences} />
