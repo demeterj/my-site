@@ -27,9 +27,28 @@ export default function Header() {
     }
   ];
   return (
-    <div className="flex w-full py-2 px-4 bg-blue-100 items-center justify-between border-b-2 border-solid border-black">
+    <div 
+      className={`
+        sticky
+        top-[-55px]
+        hover:top-0
+        transition-all
+        ease-in-out
+        delay-150
+        flex w-full
+        h-[70px]
+        px-4
+        bg-blue-100
+        items-center
+        justify-between
+        border-b-2
+        border-solid
+        border-black
+      `}
+    >
       <Logo />
       <Navigator routes={initialRoutes} spacer="|" />
+      <div className="absolute transparent h-[50px] bottom-[-50px] w-full"></div>
     </div>
   )
 }
