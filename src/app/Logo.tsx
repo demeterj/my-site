@@ -2,7 +2,11 @@ export default function Logo() {
 
   return (
     <div className="flex justify-between">
-      <a href="/"><span className="text-2xl font-bold border-solid border-2 border-black p-1 rounded-md"> JD </span></a>
+      <a href="/" className="border-solid border-2 border-black rounded-md p-1 bg-fade-in">
+        <span className="text-2xl font-bold">
+          JD
+        </span>
+      </a>
     </div>
   ) 
 }

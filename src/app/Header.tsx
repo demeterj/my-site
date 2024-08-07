@@ -47,7 +47,7 @@ export default function Header() {
       `}
     >
       <Logo />
-      <Navigator routes={initialRoutes} spacer="|" />
+      <Navigator routes={initialRoutes} />
       <div className="absolute transparent h-[50px] bottom-[-50px] w-full"></div>
     </div>
   )

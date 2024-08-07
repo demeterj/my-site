@@ -1,4 +1,7 @@
+'use client'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { Fragment } from 'react';
 
 type Route = {
   name: string,
@@ -8,7 +11,9 @@ type Route = {
 }
 type QueryParameters = { key: string, value: string }
 
-export default function Navigator({routes, spacer}: {routes: Route[], spacer?: string}){
+export default function Navigator({routes}: {routes: Route[]}){
+  const currentPathname = usePathname()
+ 
   
   function generateUrl(route: Route) {
     let url = route.path;
@@ -21,17 +26,21 @@ export default function Navigator({routes, spacer}: {routes: Route[], spacer?: s
     return url
   }
 
-  const routeList = routes.map((route) => (
-      <div key={route.path}>
-        { spacer && route.path != routes[0].path && <span className="px-2">{spacer}</span> }
-        <Link className="mx-auto hover: hover:text-blue-600" href={generateUrl(route)}>{route.name}</Link>
-      </div>
+  const routeList = routes.map((route, index) => (
+    <Fragment key={route.path}>
+      {index !== 0 && <span>|</span>}
+        <Link
+          className={`px-2 mx-2 font-bold bg-fade-in py-1 ` + (route.path === currentPathname && 'underline')}
+          href={generateUrl(route)}
+        >
+          {route.name}
+        </Link>
+      </Fragment>
     )
   )
 
-
   return (
-    <div className="flex">
+    <div className="flex justify-between items-center">
       {routeList}
     </div>
   )
