@@ -30,7 +30,7 @@ export default function Navigator({routes}: {routes: Route[]}){
     <Fragment key={route.path}>
       {index !== 0 && <span>|</span>}
         <Link
-          className={`px-2 mx-2 font-bold bg-fade-in py-1 ` + (route.path === currentPathname && 'underline')}
+          className={`px-2 mx-2 font-bold bg-fade-in py-0 ` + (route.path === currentPathname && 'underline')}
           href={generateUrl(route)}
         >
           {route.name}

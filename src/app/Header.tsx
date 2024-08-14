@@ -30,20 +30,21 @@ export default function Header() {
     <div 
       className={`
         sticky
-        top-[-55px]
+        top-[-60px]
         hover:top-0
-        transition-all
-        ease-in-out
-        delay-150
-        flex w-full
-        h-[70px]
-        px-4
-        bg-blue-100
+        z-10
+        w-full
+        flex
         items-center
         justify-between
+        p-4
+      bg-blue-100
         border-b-2
         border-solid
         border-black
+        transition-all
+        ease-in-out
+        delay-150
       `}
     >
       <Logo />
