@@ -35,4 +35,16 @@ body {
       hover:bg-[length:100%_100%]
       rounded-sm
   }
+
+  .card-pop-out {
+    @apply
+      transition-all
+      hover:shadow-lg
+      hover:bg-slate-200
+      hover:-translate-y-1
+      hover:translate-x-1
+      ease-in-out
+      delay-100
+      duration-200
+  }
 }

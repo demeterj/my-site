@@ -9,7 +9,14 @@ export default function ResumeCard({resumeItem}: {resumeItem: ResumeItem}) {
   }
 
   return (
-    <div className="grid grid-cols-5 space-x-2">
+    <div className="
+      grid
+      grid-cols-5
+      p-2
+      space-x-2
+      rounded-md
+      card-pop-out"
+    >
       <div className="col-span-1 font-light text-sm pt-[4px]">
         {resumeItem.startDate && resumeItem.endDate && formatDate(resumeItem.startDate, resumeItem.endDate)}
       </div>
