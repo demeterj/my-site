@@ -1,3 +1,19 @@
+
+const sections = [
+  {
+    key: "experience",
+    label: "EXPERIENCE",
+  },
+  {
+    key: "education",
+    label: "EDUCATION"
+  },
+  {
+    key: "skills",
+    label: "SKILLS"
+  }
+]
+
 const experiences = [
   {
     id: 0,
@@ -83,6 +99,7 @@ const educations = [
 const skills = [
   {
     id: 0,
+    title: 'Skills',
     accomplishments: [
       'Languages: JavaScript, Python, SQL',
       'Tools: React, VueJS, Flask',
@@ -91,5 +108,19 @@ const skills = [
   }
 ]
 
+const resume = [
+  {
+    key: "experience",
+    content: experiences
+  },
+  {
+    key: "education",
+    content: educations
+  },
+  {
+    key: "skills",
+    content: skills
+  }
+]
 
-export {experiences, educations, skills}
+export { sections,resume }
