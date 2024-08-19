@@ -1,19 +1,15 @@
 import Image from 'next/image'
 import ContentBox from '@/components/contentBox';
 
-const myBio = `Hi! I'm a Software Engineer and Product Manager who loves 
-being deeply involved in building interesting and impactful products. To me, the whole product development process is interesting, 
-and I've found that the longer I sepnd with a produc, the more ownership I develop and te better it becomes.`;
+const myBio = `I'm a software engineer and product manager who's motivated by building solutions that improve the lives of everyday people.`;
 
 export default function Home() {
   return (
     <main className="flex flex-col">
       <div className="flex justify-around w-full border-solid border-red-500">
         <div className="w-[700px] mt-[150px]">
-          <ContentBox>
-            <p className="text-[50px]">Jonathan Demeter</p>
-            {myBio}
-          </ContentBox>
+          <p className="text-4xl font-bold">Hi, I'm <span className="text-blue-900">Jonathan Demeter!</span></p>
+          <p className="text-2xl">{myBio}</p>
         </div>
         <ContentBox>
           <Image
