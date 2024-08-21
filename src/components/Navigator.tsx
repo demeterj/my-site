@@ -11,7 +11,32 @@ type Route = {
 }
 type QueryParameters = { key: string, value: string }
 
-export default function Navigator({routes}: {routes: Route[]}){
+const routes = [
+  {
+    name: 'Home',
+    path: '/',
+    parameters: [],
+    anchor: ''
+  },
+  {
+    name: 'Work',
+    path: '/work',
+    parameters: [],
+    anchor: ''
+  },
+  {
+    name: 'About Me',
+    path:'/about-me',
+    anchor: ''
+  },
+  {
+    name: 'Contact',
+    path:'/contact-me',
+    anchor: ''
+  }
+];
+
+export default function Navigator({closeMenu}: {closeMenu: Function}){
   const currentPathname = usePathname()
  
   
@@ -28,9 +53,10 @@ export default function Navigator({routes}: {routes: Route[]}){
 
   const routeList = routes.map((route, index) => (
     <Fragment key={route.path}>
-      {index !== 0 && <span>|</span>}
         <Link
-          className={`px-2 mx-2 font-bold bg-fade-in py-0 ` + (route.path === currentPathname && 'underline')}
+          onClick={() => closeMenu()}
+          className={`font-bold bg-fade-in text-4xl animate-fadeIn opacity-0 ` + (route.path === currentPathname && 'underline')}
+          style={{'--slidein-delay': `${(index*150 + 300)}ms`} as React.CSSProperties}
           href={generateUrl(route)}
         >
           {route.name}
@@ -40,9 +66,8 @@ export default function Navigator({routes}: {routes: Route[]}){
   )
 
   return (
-    <div className="flex justify-between items-center">
+    <>
       {routeList}
-    </div>
+    </>
   )
-
 }
