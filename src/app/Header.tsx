@@ -10,23 +10,27 @@ export default function Header() {
   }
   return (
     <>
-      <div className="fixed top-[65px] left-[65px] z-10">
-        <Logo />
-      </div>
-      <div className="fixed top-[71px] left-[130px] z-10 overflow-hidden pl-[20px] py-1 border-l-[1px] border-solid border-black">
-        <button
-          className={ menuOpen ? 'animate-bounceInFromAbove' : 'animate-bounceInFromBelow'}
-          onClick={handleMenuClick}
-        >
-          { menuOpen ? 'CLOSE' : 'MENU' }
-        </button>
-      </div>
-      <a
-        href="mailto:demeterj@umich.edu"
-        className="fixed top-[75px] right-[65px] z-10"
+      <div 
+        className="fixed top-[var(--page-offset)] left-[var(--page-offset)] w-[calc(100vw-2*var(--page-offset))] z-10 flex justify-between items-center"
+        style={{'--page-offset': '45px'} as React.CSSProperties}
       >
-        CONTACT ME
-      </a>
+        <div className="flex items-center">
+          <Logo />
+          <div className="ml-[20px] my-auto py-[5px] overflow-hidden pl-[20px] border-l-[1px] border-solid border-black">
+            <button
+              className={ menuOpen ? 'animate-bounceInFromAbove' : 'animate-bounceInFromBelow' }
+              onClick={handleMenuClick}
+            >
+              { menuOpen ? 'CLOSE' : 'MENU' }
+            </button>
+          </div>
+        </div>
+        <a
+          href="mailto:demeterj@umich.edu"
+        >
+          CONTACT ME
+        </a>
+      </div>
       {menuOpen && <Menu closeMenu={handleMenuClick} />}
     </>
   )
