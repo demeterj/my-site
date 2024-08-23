@@ -10,13 +10,20 @@ export default function Header() {
   }
   return (
     <>
-      <div className="fixed top-8 left-8 z-10">
+      <div className="fixed top-[65px] left-[65px] z-10">
         <Logo />
       </div>
-      <button className="fixed top-[43px] left-[100px] z-10" onClick={handleMenuClick}>MENU</button>
+      <div className="fixed top-[71px] left-[130px] z-10 overflow-hidden pl-[20px] py-1 border-l-[1px] border-solid border-black">
+        <button
+          className={ menuOpen ? 'animate-bounceInFromAbove' : 'animate-bounceInFromBelow'}
+          onClick={handleMenuClick}
+        >
+          { menuOpen ? 'CLOSE' : 'MENU' }
+        </button>
+      </div>
       <a
         href="mailto:demeterj@umich.edu"
-        className="fixed top-[43px] right-[40px] z-10"
+        className="fixed top-[75px] right-[65px] z-10"
       >
         CONTACT ME
       </a>

@@ -16,9 +16,11 @@ const config: Config = {
       }
     },
     animation: {
-      fadeIn: 'fadeIn 1s ease-in-out var(--slidein-delay, 0) forwards',
-      dropIn: 'dropIn 300ms ease-in forwards',
-      scale: 'scale 1s ease-in-out forwards'
+      fadeIn: 'fadeIn 1s ease var(--slidein-delay, 0) forwards',
+      dropIn: 'dropIn 300ms ease-out',
+      scale: 'scale 1s ease-in-out forwards',
+      bounceInFromAbove: 'bounceInAbove ease-out 150ms',
+      bounceInFromBelow: 'bounceInBelow ease-out 150ms'
     },
     keyframes: {
       fadeIn: {
@@ -32,6 +34,16 @@ const config: Config = {
       scale: {
         '0%': { transform: 'scale(1)' },
         '100%': { transform: 'scale(1.2)' }
+      },
+      bounceInAbove: {
+        '0%': { transform: 'translateY(-75%)'},
+        '75%': { transform: 'translateY(15%)'},
+        '100%': { transform: 'translateY(0)'}
+      },
+      bounceInBelow: {
+        '0%': { transform: 'translateY(75%)' },
+        '75%': { transform: 'translateY(-15%)' },
+        '100%': { transform: 'translateY(0)' }
       }
     }
   },
