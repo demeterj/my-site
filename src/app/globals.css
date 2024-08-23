@@ -3,10 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --primary-bg-color: 243, 243, 243;
-  --secondary-bg-color: 137, 215, 249;
-  --primary-text-color: 0, 0, 0;
-  --secondary-text-color: 255, 255, 255;
+  --primary-bg-color: 200, 200, 200;
+  --secondary-bg-color: 187, 184, 145;
+  --primary-text-color: 36, 35, 37;
+  --secondary-text-color: 179, 179, 179;
+  --third-color: 219, 234, 254;
+  --page-border-w: 20px
 }
 
 body {
@@ -29,8 +31,8 @@ body {
       bg-no-repeat
       bg-gradient-to-b
       bg-[0_100%]
-      from-red-200
-      to-red-200
+      from-color-splash
+      to-color-splash
       bg-[length:100%_0]
       hover:bg-[length:100%_100%]
       rounded-sm

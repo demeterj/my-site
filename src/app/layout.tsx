@@ -19,8 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <div className="fixed h-full w-full bg-transparent border-solid border-white border-[20px] z-[1000] pointer-events-none"></div>
-        <div className="absolute h-full w-full overflow-scroll p-[20px]">
+        <div className="fixed h-full w-full bg-transparent border-solid border-white border-[length:--page-border-w] z-[1000] pointer-events-none"></div>
+        <div className="absolute h-full w-full overflow-scroll p-[--page-border-w]">
           <Header />
           {children}
         </div>
