@@ -18,7 +18,7 @@ export default function Home() {
         </div>
       </ContentBox>
       <div className="w-[600px]">
-        <p className="text-4xl font-bold">Hi, I'm <span className="text-blue-900">Jonathan Demeter!</span></p>
+        <p className="text-4xl font-bold">Hi, I'm Jonathan Demeter!</p>
         <p className="text-2xl">{myBio}</p>
       </div>
     </div>

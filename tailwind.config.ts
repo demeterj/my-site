@@ -12,7 +12,8 @@ const config: Config = {
         "primary-bg-color": "rgb(var(--primary-bg-color))",
         "secondary-bg-color": "rgb(var(--secondary-bg-color))",
         "primary-text-color": "rgb(var(--primary-text-color))",
-        "secondary-text-color": "rgb(var(--secondary-text-color))"
+        "secondary-text-color": "rgb(var(--secondary-text-color))",
+        "color-splash": "rgb(var(--color-splash))"
       }
     },
     animation: {

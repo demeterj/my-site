@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --primary-bg-color: 200, 200, 200;
-  --secondary-bg-color: 187, 184, 145;
+  --primary-bg-color: 240, 240, 240;
+  --secondary-bg-color: 219, 234, 254;
   --primary-text-color: 36, 35, 37;
   --secondary-text-color: 179, 179, 179;
-  --third-color: 219, 234, 254;
+  --color-splash: 207, 204, 165;
   --page-border-w: 20px
 }
 
